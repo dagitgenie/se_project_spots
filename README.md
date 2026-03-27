@@ -17,4 +17,7 @@ Some features of this project includes hover effects and responsive deisgn for d
 **Images**
 This project contains several photos of landscapes users can select to like within the profiles.
 
-**Project Link**
+**Project Deployment Link**
+https://dagitgenie.github.io/se_project_spots/
+
+**Project Pitch Link**
