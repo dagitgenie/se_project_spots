@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -9,20 +9,116 @@
     <title>Spots</title>
 
     <link rel="stylesheet" href="normalize.css" />
-   <link rel="stylesheet" href="pages/index.css">
+    <link rel="stylesheet" href="pages/index.css" />
     <link rel="icon" href="favicon.png" type="image/png" />
   </head>
   <body>
     <div class="page">
       <header class="header">
-        <h1>Font check</h1>
+        <img src="./images/logo.svg" alt="Spot logo" class="header__logo" />
       </header>
       <main class="content">
-        Word
-        <section class="profile"></section>
-        <section class="cards"></section>
+        <section class="profile profile__section">
+          <img
+            src="./images/avatar.jpg"
+            alt="Bessie Coleman photo"
+            class="profile__avatar"
+          />
+          <div class="profile__column">
+            <h1 class="profile__name">Bessie Coleman</h1>
+            <p class="profile__description">Civil Aviator</p>
+            <button type="button" class="profile__edit-btn">
+              <img
+                src="./images/pencil.svg"
+                alt="Pencil icon"
+                class="profile__pencil-logo"
+              />Edit Profile
+            </button>
+          </div>
+          <button type="button" class="profile__add-btn">
+            <img
+              src="./images/plus.svg"
+              alt="Plus icon"
+              class="profile__plus-icon"
+            />New Post
+          </button>
+        </section>
+        <section class="cards page__section">
+          <ul class="cards__list">
+            <li class="card">
+              <img
+                src="./images/1-photo-by-moritz-feldmann-from-pexels.jpg"
+                alt="Val Thorens"
+                class="card__image"
+              />
+              <div class="card__content">
+                <h2 class="card__title">Val Thorens</h2>
+                <button type="button" class="card__like-btn">
+                </button>
+              </div>
+            </li>
+            <li class="card">
+              <img
+                src="./images/2-photo-by-ceiline-from-pexels.jpg"
+                alt="Restaurant terrace"
+                class="card__image"
+              />
+              <div class="card__content">
+                <h2 class="card__title">Restaurant terrace</h2>
+                <button type="button" class="card__like-btn">
+                </button>
+              </div>
+            </li>
+            <li class="card">
+              <img
+                src="./images/3-photo-by-tubanur-dogan-from-pexels.jpg" alt="An outdoor cafe"
+                class="card__image"
+              />
+              <div class="card__content">
+                <h2 class="card__title">An outdoor cafe</h2>
+                <button type="button" class="card__like-btn">
+                </button>
+              </div>
+            </li>
+            <li class="card">
+              <img
+                src="./images/4-photo-by-maurice-laschet-from-pexels.jpg" alt="A very long bridge, over the forest..."
+                class="card__image"
+              />
+              <div class="card__content">
+                <h2 class="card__title card__title-ext">A very long bridge, over the forest...</h2>
+                <button type="button" class="card__like-btn">
+                </button>
+              </div>
+            </li>
+            <li class="card">
+              <img
+                src="./images/5-photo-by-van-anh-nguyen-from-pexels.jpg" alt="Tunnel with morning light"
+                class="card__image"
+              />
+              <div class="card__content">
+                <h2 class="card__title">Tunnel with morning light</h2>
+                <button type="button" class="card__like-btn">
+                </button>
+              </div>
+            </li>
+             <li class="card">
+              <img
+                src="./images/6-photo-by-moritz-feldmann-from-pexels.jpg" alt="Mountain house"
+                class="card__image"
+              />
+              <div class="card__content">
+                <h2 class="card__title">Mountain house</h2>
+                <button type="button" class="card__like-btn">
+                </button>
+              </div>
+            </li>
+          </ul>
+        </section>
       </main>
-      <footer class="footer"></footer>
+      <footer class="footer">
+        <img src="./images/footer.png" alt="footer logo" class="footer__logo">
+      </footer>
     </div>
   </body>
 </html>
