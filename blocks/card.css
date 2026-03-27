@@ -3,10 +3,11 @@
 }
 
 .card__image {
-  height: 445px;
+  height: 413px;
   width: 413px;
   object-fit: cover;
   display: block;
+  border-radius: 8px;
 }
 
 .card__content {
@@ -16,9 +17,13 @@
 }
 
 .card__title {
-  margin-top: 12px;
+  margin: 12px 0 0;
   font-size: 20px;
   font-family: "Poppins", Arial, Helvetica, sans-serif;
+  font-weight: 500;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
 }
 
 .card__like-btn {

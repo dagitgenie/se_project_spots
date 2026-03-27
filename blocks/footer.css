@@ -1,9 +1,8 @@
 .footer {
   display: flex;
   justify-content: center;
-  /* padding-top: 60px; */
 }
 
-.footer__logo {
-  margin: 60px;
+.footer__copyright {
+  padding: 60px 0;
 }

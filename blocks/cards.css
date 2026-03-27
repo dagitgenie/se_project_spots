@@ -14,12 +14,10 @@
 }
 
 @media screen and (max-width: 627px) {
- 
-.cards__list {
+  .cards__list {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
   }
-  
 }
