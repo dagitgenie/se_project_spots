@@ -21,3 +21,4 @@ This project contains several photos of landscapes users can select to like with
 https://dagitgenie.github.io/se_project_spots/
 
 **Project Pitch Link**
+https://drive.google.com/file/d/1dfTm94DJj3Gs_dUdSGiVgHAyvQJBhojX/view?usp=sharing
