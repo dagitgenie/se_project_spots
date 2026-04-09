@@ -35,10 +35,22 @@
   font-size: 32px;
 }
 
-.modal_close-btn {
+/* .modal_close-btn {
   position: absolute;
   top: 32px;
   right: 50px;
+  width: 40px;
+  height: 40px;
+  padding: 0;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+} */
+
+.modal__close-btn {
+  position: absolute;
+  top: 20px;
+  right: 20px;
   width: 40px;
   height: 40px;
   padding: 0;
