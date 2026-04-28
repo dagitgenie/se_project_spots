@@ -30,7 +30,6 @@
 
 .modal__title {
   margin: 0 0 32px;
-  justify-content: space-between;
   font-size: 32px;
 }
 
@@ -44,6 +43,11 @@
   background-color: transparent;
   border: none;
   cursor: pointer;
+  transition: opacity 0.3s ease;
+}
+
+.modal__close-btn:hover {
+  opacity: 0.6;
 }
 
 .modal__close-btn_type_preview {
@@ -52,7 +56,7 @@
 }
 
 .modal__close-btn_type_preview:hover {
-  opacity: 0.6;
+  opacity: 0.4;
 }
 
 .modal__close-icon {
@@ -69,6 +73,11 @@
   color: #fff;
   border-radius: 8px;
   cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.modal__submit-btn:hover {
+  background-color: #000;
 }
 
 .modal__form {
@@ -78,7 +87,6 @@
 
 .modal__input {
   display: block;
-  margin-top: 8px;
   margin: 8px 0 0;
   width: 100%;
   height: 52px;

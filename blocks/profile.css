@@ -47,7 +47,6 @@
   flex-direction: row;
   margin-top: auto;
   border: none;
-  flex-direction: row;
   gap: 8px;
   background-color: transparent;
   padding: 0;
@@ -63,7 +62,7 @@
 .profile__add-btn {
   display: flex;
   margin-left: auto;
-  width: 149px;
+  width: 157px;
   height: 52px;
   justify-content: center;
   align-items: center;
@@ -71,7 +70,8 @@
   margin-top: auto;
   color: #fff;
   gap: 8px;
-  border-radius: 10px;
+  border-radius: 8px;
+  border: none;
 }
 
 .profile__add-btn:hover {
@@ -108,7 +108,7 @@
     text-overflow: ellipsis;
     -webkit-line-clamp: 3;
     -webkit-box-orient: vertical;
-    width: 288px;
+    max-width: 288px;
   }
 
   .profile__column {
@@ -129,6 +129,6 @@
   }
 
   .profile__description {
-    width: 288px;
+    max-width: 288px;
   }
 }

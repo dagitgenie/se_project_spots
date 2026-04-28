@@ -1,38 +1,28 @@
-// const profileEditBtn = document.querySelector(".profile__edit-btn");
-
-// console.log("Hello");
-
 const initialCards = [
   {
     name: "Golden Gate Bridge",
     link: "https://practicum-content.s3.us-west-1.amazonaws.com/software-engineer/spots/7-photo-by-griffin-wooldridge-from-pexels.jpg",
   },
-
   {
     name: "Val Thorens",
     link: "https://practicum-content.s3.us-west-1.amazonaws.com/software-engineer/spots/1-photo-by-moritz-feldmann-from-pexels.jpg",
   },
-
   {
     name: "Restaurant terrace",
     link: "https://practicum-content.s3.us-west-1.amazonaws.com/software-engineer/spots/2-photo-by-ceiline-from-pexels.jpg",
   },
-
   {
     name: "An outdoor cafe",
     link: "https://practicum-content.s3.us-west-1.amazonaws.com/software-engineer/spots/3-photo-by-tubanur-dogan-from-pexels.jpg",
   },
-
   {
     name: "A very long bridge, over the forest and through the trees",
     link: "https://practicum-content.s3.us-west-1.amazonaws.com/software-engineer/spots/4-photo-by-maurice-laschet-from-pexels.jpg",
   },
-
   {
     name: "Tunnel with morning light",
     link: "https://practicum-content.s3.us-west-1.amazonaws.com/software-engineer/spots/5-photo-by-van-anh-nguyen-from-pexels.jpg",
   },
-
   {
     name: "Mountain house",
     link: "https://practicum-content.s3.us-west-1.amazonaws.com/software-engineer/spots/6-photo-by-moritz-feldmann-from-pexels.jpg",
@@ -46,7 +36,6 @@ const editProfileFormEl = editProfileModal.querySelector(".modal__form");
 const editProfileNameInput = editProfileModal.querySelector(
   "#profile-name-input",
 );
-
 const editProfileDescriptionInput = editProfileModal.querySelector(
   "#profile-description-input",
 );
@@ -102,34 +91,21 @@ function getCardElement(data) {
 
 function handleAddCardSubmit(evt) {
   evt.preventDefault();
-  console.log("FORM SUBMIT WORKING");
-  console.log(nameInput);
-  console.log(linkInput);
-  console.log(nameInput.value);
-  console.log(linkInput.value);
 
-  const inputValues = {
+  const cardElement = getCardElement({
     name: nameInput.value,
     link: linkInput.value,
-  };
-
-  const cardElement = getCardElement(inputValues);
-  // spent  an hour to find out i mispelled input
+  });
 
   cardsList.prepend(cardElement);
-  newPostModal.classList.remove("modal_is-open");
+  addCardFormElement.reset();
+  closeModal(newPostModal);
 }
 
 addCardFormElement.addEventListener("submit", handleAddCardSubmit);
 
 const profileNameEl = document.querySelector(".profile__name");
 const profileDescriptionEl = document.querySelector(".profile__description");
-
-// const editProfileNameInput = querySelector("#profile-description-input");
-
-// const editProfileNameInput = querySelector("#profile-description-input");
-
-// const profileDescriptionInput = getElementById.card("profile-description-input");
 
 editProfileBtn.addEventListener("click", function () {
   openModal(editProfileModal);
@@ -157,7 +133,7 @@ function handleProfileFormSubmit(evt) {
   evt.preventDefault();
   profileNameEl.textContent = editProfileNameInput.value;
   profileDescriptionEl.textContent = editProfileDescriptionInput.value;
-  editProfileModal.classList.remove("modal_is-open");
+  closeModal(editProfileModal);
 }
 
 editProfileFormEl.addEventListener("submit", handleProfileFormSubmit);

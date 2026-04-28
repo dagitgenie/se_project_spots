@@ -48,6 +48,7 @@
   background-color: transparent;
   cursor: pointer;
 }
+
 .card__like-btn_active {
   background-image: url(../images/red-heart.svg);
 }
@@ -85,11 +86,10 @@
 }
 
 @media screen and (max-width: 627px) {
-  .card {
-  }
   .card__image {
+    max-width: 100%;
     width: 288px;
-    height: 288px;
+    height: auto;
   }
   .card__title-ext {
     text-overflow: ellipsis;
