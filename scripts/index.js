@@ -44,8 +44,8 @@ const newPostModal = document.querySelector("#new-post-modal");
 const addNewPostCloseBtn = newPostModal.querySelector(".modal__close-btn");
 const addCardFormElement = newPostModal.querySelector(".modal__form");
 const cardSubmitBtn = newPostModal.querySelector(".modal__submit-btn");
-const nameInput = newPostModal.querySelector("#card-caption-input");
-const linkInput = newPostModal.querySelector("#card-image-input");
+const cardCaptionInput = newPostModal.querySelector("#card-caption-input");
+const cardImageInput = newPostModal.querySelector("#card-image-input");
 
 // function validate(modal){
 //   const inputs = modal.querySelector(".modal__input");
@@ -65,21 +65,23 @@ const cardTemplate = document
 const cardsList = document.querySelector(".cards__list");
 const modalList = document.querySelectorAll(".modal");
 
-function handleEscClose(evt) {
+function closeOnEscape(evt) {
   if (evt.key === "Escape") {
     const openedModal = document.querySelector(".modal_is-open");
-    closeModal(openedModal);
+    if (openedModal) {
+      closeModal(openedModal);
+    }
   }
 }
 
 function openModal(modal) {
   modal.classList.add("modal_is-open");
-  document.addEventListener("keydown", handleEscClose);
+  document.addEventListener("keydown", closeOnEscape);
 }
 
 function closeModal(modal) {
   modal.classList.remove("modal_is-open");
-  document.removeEventListener("keydown", handleEscClose);
+  document.removeEventListener("keydown", closeOnEscape);
 }
 
 modalList.forEach(function (modal) {
@@ -125,8 +127,8 @@ function handleAddCardSubmit(evt) {
   evt.preventDefault();
 
   const cardElement = getCardElement({
-    name: nameInput.value,
-    link: linkInput.value,
+    name: cardCaptionInput.value,
+    link: cardImageInput.value,
   });
 
   cardsList.prepend(cardElement);
