@@ -14,8 +14,8 @@
   padding: 20px;
   opacity: 0;
   transition:
-    visibility 0s linear 0.5s,
-    opacity 0.5s linear;
+    visibility 0s linear 0.3s,
+    opacity 0.3s ease;
 }
 
 .modal_type_preview {
@@ -76,6 +76,13 @@
   transition: background-color 0.3s ease;
 }
 
+.modal__submit-btn_disabled {
+  color: red;
+  opacity: 0.6;
+  cursor: default;
+  pointer-events: none;
+}
+
 .modal__submit-btn:hover {
   background-color: #000;
 }
@@ -104,6 +111,15 @@
 
 .modal__input:hover {
   border-color: #212121;
+}
+
+.modal__input_type_error {
+  border: 1px solid rgba(255, 0, 0, 0.6);
+}
+.modal__error {
+  display: block;
+  color: red;
+  margin-top: 8px;
 }
 
 .modal__label {
@@ -140,6 +156,12 @@
   padding: 32px 50px;
   box-sizing: border-box;
   font-family: "Poppins", Arial, sans-serif;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.modal_is-open .modal__container {
+  opacity: 1;
 }
 
 .modal__image-container {
@@ -149,6 +171,12 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.modal_is-open .modal__image-container {
+  opacity: 1;
 }
 
 @media screen and (max-width: 480px) {
